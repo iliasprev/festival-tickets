@@ -1,0 +1,68 @@
+.container-ilias {
+    width: 100%;
+    height: 400px;
+    border:1px solid black;
+    background-image: url("/images/festival1.jpeg");
+    background-size: contain;
+}
+
+/* .logo{
+    height: 100px;
+    width: 200px;
+} */
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: 38px;
+    left: 20%;
+    width: 43%;
+    height: 40px;
+  }
+  
+  nav ul li {
+    margin-left: 20px; /* Adjust margin between menu items */
+  }
+  
+  nav ul li a {
+    color:#2CCCD1; /* Text color */
+    text-decoration: none;
+    font-weight: bold; /* Make the text bold */
+  }
+  
+ 
+  /* Logo styles */
+ .logo-ilias img {
+
+    height: 130px;
+    width: 150px;
+    position: absolute;
+    top: 4px;
+    left: 0px;
+ }
+
+ .content-ilias{
+    color: white;
+    float: right;
+    position: relative;
+    left: -40px;
+    height: 30px;
+    width: 96px;
+    border-radius: 7px;
+    background-color: #2CCCD1;
+    bottom: 17px;
+
+
+ }
+.cathydiv{
+    color: white;
+    position: absolute;
+    top: 160px;
+    left: 329px;
+    width: 60%;
+    height: 60px;
+    /* border: 1px solid red; */
+}
