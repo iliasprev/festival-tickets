@@ -1,0 +1,57 @@
+extends layout 
+block content
+
+    header
+      .container-ilias
+        .cathydiv 
+            h2.cathy We Can Make Your Dream Come True
+        a.logo-ilias(href="")
+          img.logo(src="images/logo11.png", alt="Logo")
+        nav
+          ul.list-items-container
+            li.list-items-ilias
+              a(href="#") Listing
+            li.list-items-ilias 
+              a(href="#") About Us
+            li.list-items-ilias
+              a(href="#") Terms and Conditions
+        button.content-ilias Sell Tickets
+
+    h3.written-content TicketSphere is the world’s favourite place for fans to buy and sell tickets.
+    -console.log("index",data[0].festival_name)
+    main.main
+        each item in data
+            -console.log("Index",item)
+            .tickets-content
+                .fest-name
+                    img.ticket_image(src="https://images.prismic.io/indiecampers-demo/c9d6718c-72c8-4f1f-8847-f53396ae3c20_pexels-wendy-wei-1190297.jpg?auto=compress,format&rect=0,0,3298,2200&w=960&q=20&ar=4:3&fit=crop")
+                    p.ticket_name #{item.festival_name}
+                .fest-desc
+                    p 
+                        b Location : #{item.location}
+                    p 
+                        b Date : #{item.date}
+                a(href="").info-anchor More info
+
+    footer
+      .footer-section
+        .contact
+          h2 Contact Us
+          p Email: info@festivaltickets.com
+          p Phone: +44 123 456 7890
+          p Address: 123 Festival Street, London, United Kingdom.
+        .follow
+          h2 Follow Us
+          // Add social media icons
+          .social-icons
+            img(src="images/socialMediaImages.png", alt="Social media image")
+        .support
+          h2 Support Us
+          p For any inquiries or assistance, please contact us via email or phone.
+
+    
+
+//- extends layout
+//- block content
+//-     h1 #{heading}
+//-     p first paragraph xxx
