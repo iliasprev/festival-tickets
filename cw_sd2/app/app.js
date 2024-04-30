@@ -16,7 +16,7 @@ app.use(express.static("static"))
 
 // Create a route for root - /
 app.get("/", function(req, res) {
-    res.send("Hello world!");
+    res.send("Hello world from app.js");
 });
 
 app.get("/header",(req,res)=>{
