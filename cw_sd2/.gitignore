@@ -1,1 +1,5 @@
 db/mysql.sock
+# Ignore environment variable files
+.env
+db
+db/*
