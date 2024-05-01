@@ -7,19 +7,22 @@ html(lang="en")
     .login-container
       .login-form
         h2.login-title Sign Up
-        form(action="", method="POST")
+        form(action="/signup", method="POST")
           .form-group
-            label(for="firstName") First Namw
+            label(for="firstName") First Name
             input(type="text", id="firstName", name="firstName", placeholder="Enter your first name", required)
           .form-group
             label(for="lastName") Last name
             input(type="text", id="username", name="lastName", placeholder="Enter your last name", required)
           .form-group
-            label(for="phNum") Last name
-            input(type="text", id="phNum", name="phNum", placeholder="Enter your phone num", required)
+            label(for="phNum") Phone Number
+            input(type="text", id="phNum", name="phNum", placeholder="Enter your phone number", required)
+          .form-group
+            label(for="address") Postal code
+            input(type="text", id="address", name="address", placeholder="Enter your postal code", required)
           .form-group
             label(for="username") Username
-            input(type="text", id="lastName", name="username", placeholder="Enter your username", required)
+            input(type="text", id="lastName", name="username", placeholder="Enter your email", required)
           .form-group
             label(for="password") Password
             input(type="password", id="password", name="password", placeholder="Enter your password", required)

@@ -57,27 +57,27 @@ async addUser(para) {
     var maxm = 99999999; 
     var id = Math.floor(Math.random() * (maxm - minm + 1)) + minm; 
     console.log("ID in idcreation",id);
-    var sql = "INSERT INTO users (id,mail, password) VALUES (?,? , ?)";
-    const result = await db.query(sql, [id,this.email, pass]);
+    var sql = "INSERT INTO users (id ,name, surname, phone_number, address, mail, password) VALUES (? , ? , ?, ? , ? , ?, ?)";
+    const result = await db.query(sql, [id, para.firstName, para.lastName, para.phNum, para.address,this.email, pass]);
     console.log("Result from addUser",result)
     console.log("\nFrom add USer",result.insertId);
     this.id = id;
     return true;
 }
 
-// async authenticate(submitted) {
-//     // Get the stored, hashed password for the user
-//     var sql = "SELECT password FROM Users WHERE id = ?";
-//     const result = await db.query(sql, [this.id]);
-//     console.log("Result from authenticate",result);
-//     const match = await bcrypt.compare(submitted, result[0].password);
-//     if (match == true) {
-//         return true;
-//     }
-//     else {
-//         return false;
-//     }
-// }
+async authenticate(password) {
+    // Get the stored, hashed password for the user
+    var sql = "SELECT password FROM users WHERE id = ?";
+    const result = await db.query(sql, [this.id]);
+    console.log("Result from authenticate",result);
+    const match = await bcrypt.compare(password, result[0].password);
+    if (match == true) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 
 
 }

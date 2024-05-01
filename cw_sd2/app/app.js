@@ -6,6 +6,14 @@ var app = express();
 
 app.use(express.urlencoded({ extended: true }));
 
+var session = require('express-session');
+app.use(session({
+  secret: 'secretkeysdfjsflyoifasd',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false }
+}));
+
 
 // Add static files location
 app.use(express.static("static"));
@@ -26,7 +34,7 @@ app.get("/login",(req,res)=>{
     res.render("login");
 })
 
-app.post("/loginnn",async function(req,res){
+app.post("/login",async function(req,res){
     console.log("==>loginPost",req.body);
     parameters = req.body;
     var user = new User(parameters.username);
@@ -34,16 +42,52 @@ app.post("/loginnn",async function(req,res){
         var UserId = await user.getIdFromEmail();
         console.log("UID in loginnnPOST",UserId);
         if(UserId){
-            console.log("UserId exist");
+            match = await user.authenticate(parameters.password);
+            if (match) {
+                console.log("Inside IF of logIN match",req);
+                req.session.uid = UserId;
+                req.session.loggedIn = true;
+                // OPTIONAL: examine the session in the console
+                console.log("Session_ID",req.session.id);
+                res.redirect('/db_test');
+            }
+            else {
+                // TODO improve the user journey here
+                res.send('invalid password');
+            }
+            res.redirect("/db_test");
+        }else{
+            res.render("login");
+        }
+    } catch (err) {
+        console.error(`Error while comparing `, err.message);
+    }
+
+    // res.render("login");
+})
+app.get("/signup", (req,res)=>{
+    res.render("signup");
+})
+app.post("/signup",async function(req,res){
+    console.log("==>loginPost",req.body);
+    parameters = req.body;
+    var user = new User(parameters.username);
+    try {
+        var UserId = await user.getIdFromEmail();
+        console.log("UID in loginnnPOST",UserId);
+        if(UserId){
+            // alert("User Id already exists");
+            res.send("User Id already exists");
         }else{
             let resul = await user.addUser(parameters);
             console.log("Res from post loginnn",resul);
+            res.redirect("/login");
                 }
     } catch (err) {
         console.error(`Error while comparing `, err.message);
     }
 
-    res.send("hello after login");
+    // res.send("hello after login");
 })
 
 app.get("/footer",(req,res)=>{
