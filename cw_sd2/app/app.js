@@ -18,7 +18,7 @@ app.use(session({
 // Add static files location
 app.use(express.static("static"));
 
-// Get the functions in the db.js file to use
+// Get the functions in the db.js file to usee
 const db = require('./services/db');
 app.set('view engine', 'pug');
 app.set('views', './app/views');
