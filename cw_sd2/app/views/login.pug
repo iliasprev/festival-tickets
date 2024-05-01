@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    title Login Page
+    link(rel="stylesheet", href="login.css")
+  body(class="body")
+    .login-container
+      .login-form
+        h2.login-title Login
+        form(action="/loginnn", method="POST")
+          .form-group
+            label(for="username") Username
+            input(type="text", id="username", name="username", placeholder="Enter your username", required)
+          .form-group
+            label(for="password") Password
+            input(type="password", id="password", name="password", placeholder="Enter your password", required)
+          input(type='submit' value='Submit',class="login-button")
+      .signup-link
+        p Don't have an account? 
+        a(href="/signup") Sign up here

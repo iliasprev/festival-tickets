@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+  head
+    title Sign Up 
+    link(rel="stylesheet", href="signUp.css")
+  body(class="body")
+    .login-container
+      .login-form
+        h2.login-title Sign Up
+        form(action="", method="POST")
+          .form-group
+            label(for="firstName") First Namw
+            input(type="text", id="firstName", name="firstName", placeholder="Enter your first name", required)
+          .form-group
+            label(for="lastName") Last name
+            input(type="text", id="username", name="lastName", placeholder="Enter your last name", required)
+          .form-group
+            label(for="phNum") Last name
+            input(type="text", id="phNum", name="phNum", placeholder="Enter your phone num", required)
+          .form-group
+            label(for="username") Username
+            input(type="text", id="lastName", name="username", placeholder="Enter your username", required)
+          .form-group
+            label(for="password") Password
+            input(type="password", id="password", name="password", placeholder="Enter your password", required)
+          input(type='submit' value='Sign Up',class="login-button")
+      .signup-link
+        a(href="/login") Login

@@ -1,0 +1,84 @@
+.body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background-color: #f0f0f0; */
+  background-image: url(images/festival1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 700px;
+  width: 100%; */
+  /* border: 1px solid red; */
+}
+
+.login-container {
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 30%;
+  height: 50%;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.5);
+}
+
+
+.login-form {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.login-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2CCCD1;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #2CCCD1;
+  box-shadow: 0px 0px 10px lightblue;
+}
+
+.signup-link {
+    text-align: center;
+    padding: 5px 0px 0px 20px;
+    color: white;
+}
+
+.signup-link a {
+  color: #2CCCD1;
+  text-decoration: none;
+  
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
