@@ -1,0 +1,178 @@
+body {
+    background-color: black;
+}
+
+header {
+    background-color: #333; /* Set background color for the header */
+    padding: 10px 20px; /* Add padding for spacing */
+    color: white; /* Set text color */;
+}
+
+.header-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-evenly;
+    align-items: center;
+    height: 123px;
+}
+
+.logo {
+    width: 170px; 
+    height: 14opx;
+}
+.text {
+    color: #1e1510;
+    font-weight: bolder;
+    font-family: fantasy;
+    font-size: 40px;
+    position: absolute;
+    left: -100%;
+    animation: moveText 5s forwards, glow 5s infinite alternate; /* Add glow animation */
+}
+
+@keyframes moveText {
+    0% {
+        left: -100%; 
+    }
+    100% {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #c0bab6, 0 0 20px #c0bab6, 0 0 30px #c0bab6, 0 0 40px #c0bab6, 0 0 50px #9f826f, 0 0 60px #c0bab6, 0 0 70px #c0bab6;
+    }
+    to {
+        text-shadow: 0 0 20px #c0bab6, 0 0 30px #c0bab6, 0 0 40px #c0bab6, 0 0 50px #c0bab6, 0 0 60px #c0bab6, 0 0 70px #c0bab6, 0 0 80px #c0bab6;
+    }
+}
+.nav-links {
+    margin-left: auto;
+    margin-bottom: 20px; /* Push the navigation links to the right */
+}
+
+.nav-link {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #2CCCD1;
+    border-radius: 10px;
+    transition: 3s;
+}
+
+.nav-link:hover {
+    box-shadow: 1px 1px 20px;
+    border: 1px solid rgb(19, 144, 211);
+    background-color: #2CCCD1;
+}
+
+.home-button {
+    padding: 10px 20px; /* Add padding for button */
+    background-color: #09102d; /* Set background color for button */
+    color: white; /* Set text color for button */
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 5px; /* Add border radius for rounded corners */
+}
+.contact-us {
+    padding: 10px 20px;
+    background-color: #323b61;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.contact-us:hover {
+    background-color: #cc5500; /* Change background color on hover */
+}
+
+.home-button:hover {
+    background-color: #cc5500; /* Change background color on hover */
+}
+
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url('./festival1.jpeg');
+}
+.image-container img {
+    height: 100%;
+    width: 100%;
+}
+
+.text-1 {
+    margin-top: 50px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.paragraph {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    font-size: 28px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.page-layout {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-container {
+    width: 50%; /* Adjust the width as needed */
+}
+
+.why-ticketsphere {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.safe {
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+}
+.safe i {
+    font-size: 100px;
+}
+
+.Easy {
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+}
+.Easy i {
+    font-size: 100px;
+}
+.desc  {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+.fair {
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+}
+.fair i {
+    font-size: 100px;
+    margin-right: 20px;
+}
+.desc1  {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+.desc2  {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
