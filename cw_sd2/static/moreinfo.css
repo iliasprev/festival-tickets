@@ -1,0 +1,146 @@
+/* styles.css */
+
+/* Body and Typography */
+body {
+    font-family: 'Poppins', sans-serif; /* Change to a more appealing font */
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: relative;
+    left: 17%;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 3rem; /* Increased font size */
+    margin-bottom: 20px;
+    text-align: center; /* Center the text */
+    font-family: 'Montserrat', sans-serif; /* Change to a more appealing font */
+}
+
+h2 {
+    font-size: 1.8rem; /* Increased font size */
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif; /* Change to a more appealing font */
+}
+
+p {
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif; /* Change to a more appealing font */
+}
+
+/* Button */
+.buy-ticket-btn {
+    background-color: #ff6600; /* Orange background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding for button */
+    font-size: 1rem; /* Smaller font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    margin-top: 10px; /* Add space between h1 and button */
+}
+
+.buy-ticket-btn:hover {
+    background-color: #cc5500; /* Darker orange on hover */
+}
+
+/* Header */
+.moreinfoHead {
+    background-image: url(images/BT1-YOUR-TYPE-1-GUIDE-TO-MUSIC-FESTIVALS-HEADER-2021-1200x429.jpg);
+    background-color: #000000;
+    color: #000000; /* Change text color to white */
+    padding: 20px;
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children vertically */
+    justify-content: center; /* Center elements horizontally */
+    align-items: center; /* Center elements vertically */
+}
+
+.moreinfoHead h1 {
+    font-size: 3.5rem; /* Larger font size for the title */
+    font-family: 'Montserrat', sans-serif; /* Change to a more appealing font */
+    text-align: center; /* Center the text horizontally */
+}
+
+.moreinfoHead nav {
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    right: 20px; /* Move the navigation to the top right corner */
+    text-align: right; /* Align text to the right within the nav */
+}
+
+.moreinfoHead nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right; /* Align text to the right within the nav */
+}
+
+.moreinfoHead nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.moreinfoHead nav ul li:last-child {
+    margin-right: 0;
+}
+
+.moreinfoHead nav ul li a {
+    color: #090808;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem; /* Increased font size */
+}
+
+.moreinfoHead nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+/* Festival Picture */
+.festival-picture {
+    display: block;
+    margin: 0 auto 20px; /* Center the image and add bottom margin */
+    width: 100%; /* Make the image full width */
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto;
+}
+
+/* Description Section */
+.description {
+    margin-bottom: 20px;
+}
+
+/* Artist Section */
+.artist {
+    margin-bottom: 20px;
+}
+
+/* Location and Time Section */
+.location-time {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #020202;
+    padding: 20px;
+    text-align: center;
+}
