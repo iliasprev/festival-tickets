@@ -1,6 +1,5 @@
 db/mysql.sock
 # Ignore environment variable files
 .env
-
-# Ignore Docker related files (if necessary)
-docker-compose.yml
+db
+db/*
