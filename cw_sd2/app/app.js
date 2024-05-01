@@ -1,8 +1,11 @@
 // Import express.js
 const express = require("express");
-
+const { User } = require("./models/Users");
 // Create express app
 var app = express();
+
+app.use(express.urlencoded({ extended: true }));
+
 
 // Add static files location
 app.use(express.static("static"));
@@ -19,11 +22,30 @@ app.get("/", function(req, res) {
     res.send("Hello world from app.js");
 });
 
-app.get("/header",(req,res)=>{
-    res.render("header")
-
-
+app.get("/login",(req,res)=>{
+    res.render("login");
 })
+
+app.post("/loginnn",async function(req,res){
+    console.log("==>loginPost",req.body);
+    parameters = req.body;
+    var user = new User(parameters.username);
+    try {
+        var UserId = await user.getIdFromEmail();
+        console.log("UID in loginnnPOST",UserId);
+        if(UserId){
+            console.log("UserId exist");
+        }else{
+            let resul = await user.addUser(parameters);
+            console.log("Res from post loginnn",resul);
+                }
+    } catch (err) {
+        console.error(`Error while comparing `, err.message);
+    }
+
+    res.send("hello after login");
+})
+
 app.get("/footer",(req,res)=>{
     res.render("footer")
 
