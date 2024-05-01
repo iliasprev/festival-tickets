@@ -1,0 +1,77 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Festival Ticket Sales
+  style.
+    body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
+    }
+    .background {
+    background-image: url("/images/festival1.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding-top: 100px; /* Yazının üst kısmında biraz boşluk bırakmak için */
+    position: relative; /* Logoyu pozisyonlandırmak için */
+    }
+    .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px; /* Logo genişliği */
+    height: auto; /* Otomatik yükseklik */
+    }
+    .content {
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.5); /* İçerik alanı için bir arka plan rengi */
+    padding: 20px;
+    border-radius: 20px; /* Köşeleri yuvarlamak için */
+    box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.5); /* Glow effect */
+    }
+    label {
+    display: block;
+    margin-bottom: 5px;
+    }
+    input {
+    width: calc(100% - 20px); /* 20px'lik paddingler çıkarılıyor */
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    }
+    button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2CCCD1; /* Buton rengi */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px; /* Köşeleri yuvarlak yap */
+    box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.5); /* Glow effect */
+    }
+    button:hover {
+    background-color: #29ABE2; /* Butonun hover rengi */
+    }
+.background
+  img.logo(src='/images/logo11.png' alt='Your Website Logo')
+  h1 Please Enter Festival Details
+  .content
+    form#ticketForm
+      label(for='festivalName') Festival Name:
+      input#festivalName(type='text' name='festivalName' required='')
+      label(for='location') Location:
+      input#location(type='text' name='location' required='')
+      label(for='date') Date:
+      input#date(type='date' name='date' required='')
+      label(for='price') Price:
+      input#price(type='number' name='price' required='')
+      button(type='submit') SELL
