@@ -1,5 +1,13 @@
 db/mysql.sock
 # Ignore environment variable files
 .env
-db
-db/*
+db/#ib_16384_0.dblwr
+db/#innodb_redo/
+db/binlog.index
+db/ib_buffer_pool
+db/ibdata1
+db/mysql.ibd
+db/undo_001
+db/undo_002
+db/binlog.000018
+db/binlog.000019
